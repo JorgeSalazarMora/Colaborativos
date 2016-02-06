@@ -10,17 +10,19 @@ namespace Hello.Word.Tests
         [TestMethod]
         public void TestSayHelloMyName()
         {
-            // preparar el escenario
+            // Tres partes de las pruebas unitarias.
+            //--------------------------------------/////////
+            // 1. Preparar el escenario
             string myName = "Jorge";
             string resultadoEsperado = "Hello world, Jorge";
             string resultadoReal;
             HelloWorldClient client = new HelloWorldClient();
 
-            // invoco al metodo correspondiente
+            // 2. Invoco al metodo correspondiente
             resultadoReal = client.SayHello(myName);
 
 
-            // comparacion de resultados
+            // 3. Comparacion de resultados
             Assert.AreEqual(resultadoEsperado, resultadoReal);
         }
 
